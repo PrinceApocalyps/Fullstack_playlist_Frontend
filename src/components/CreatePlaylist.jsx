@@ -7,7 +7,7 @@ function CreatePlaylist({onCreation}) {
 function handleSubmit(e) {
         e.preventDefault();
 
-        fetch('import.meta.env.VITE_API_URL', {
+        fetch(import.meta.env.VITE_API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title, genre })

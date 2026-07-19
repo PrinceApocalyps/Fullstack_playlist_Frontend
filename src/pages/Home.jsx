@@ -11,7 +11,7 @@ function Home() {
     const [isHidden, setIsHidden] = useState(true);
 
     const fetchPlaylist = useCallback(()=>{
-        fetch("import.meta.env.VITE_API_URL")
+        fetch(import.meta.env.VITE_API_URL)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error: ${response.status}`);
